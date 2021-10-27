@@ -82,6 +82,7 @@ class App extends Component {
 
         //this.pubnub = usePubNub();
 
+
         this.getStats = this.getStats.bind(this);
         this.handleSongFinishedPlaying = this.handleSongFinishedPlaying.bind(this);
         this.startTimer = this.startTimer.bind(this);
@@ -89,6 +90,7 @@ class App extends Component {
         this.showMessage = this.showMessage.bind(this);
     }
 
+    
     showMessage(msg){
         window.clearInterval(this.state.timer_id);
 
