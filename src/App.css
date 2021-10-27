@@ -1,0 +1,505 @@
+body{
+    background-color: #f7f9f9;
+}
+
+.bartender-content{
+    width: 100%;
+    overflow-x: hidden;
+    padding: 0px;
+    margin-top: 50px;
+    margin-bottom: 67px;
+}
+
+.bartender-logo{
+    display: flex;
+    align-items: center;
+    width: 120px;
+    justify-content: space-between;
+}
+
+.link:hover{
+    text-decoration: none;
+}
+
+.black-bg{
+    background-color: #000000;
+}
+
+.grey-bg{
+    background-color: #797d7f;
+}
+
+.blue-bg{
+    background-color: #2E86C1;
+}
+
+.green-bg{
+    background-color: #287428;
+}
+
+.yellow-bg{
+    background-color: #D68910;
+}
+
+.red-bg{
+    background-color: #A93226;
+}
+
+.purple-bg{
+    background-color: #7D3C98;
+}
+
+.black-text{
+    color: #000000;
+}
+
+.white-text{
+    color: #FFFFFF;
+}
+
+.bt-red-text{
+    color: #A93226;
+}
+
+.bt-green-text{
+    color: #287428;
+}
+
+.bt-blue-text{
+    color: #2E86C1;
+}
+
+.white-text:hover{
+    color: #CCCCCC;
+}
+
+.laser-inline{
+    display: inline;
+}
+
+.bt-inline{
+    display: inline;
+}
+
+.bt-bottom-div{
+    width: 100%;
+    min-width: 500px;
+    
+    background-color: #000000;
+    color: #FFFFFF;
+    position: fixed;
+    bottom: 0;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    z-index: 1000;
+}
+
+.bt-btn{
+    border-radius: 18px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border: 0px solid #FF000000;
+    color: #FFFFFF;
+    -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+.bt-btn-nav{
+    border-radius: 18px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    border: 0px solid #FF000000;
+    color: #FFFFFF;
+    -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+.bt-home-item{
+    width: 200px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: #FFFFFF;
+}
+
+.bt-center{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.shadow{
+    -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+}
+
+.top-div{
+    padding-top: 20px;
+}
+
+.bt-item-promo{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 12px;
+    height: 200px;
+    max-height: 200px;
+    padding: 16px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    background-color: #FFFFFF;
+    color: #222222;
+}
+
+.bt-item-drink-profit{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 12px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: #FFFFFF;
+    color: #222222;
+}
+
+.bt-item-user{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    background-color: #FFFFFF;
+    min-height: 290px;
+    color: #222222;
+}
+
+.bt-item{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    background-color: #FFFFFF;
+    color: #222222;
+}
+
+.bt-item-no-margin{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 12px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 16px;
+    background-color: #FFFFFF;
+    color: #222222;
+}
+
+.EditCategoryModal{
+    position: absolute;
+    top: 200px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    width: 500px;
+    height: 460px;
+    padding: 16px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #FFFFFF;
+}
+
+.CategoryModal{
+    position: absolute;
+    top: 200px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    width: 500px;
+    height: 400px;
+    padding: 16px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #FFFFFF;
+}
+
+.AgentModal{
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    width: 800px;
+    padding: 16px;
+    height: 1160px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 100px; 
+    background-color: #FFFFFF;
+}
+
+.LoadingOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    margin-top: 0px;
+    z-index: 10000;
+    background-color: rgba(0,0,0,0.2)
+}
+
+.LoadingModal{
+    position: absolute;
+    top: 40vh;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    width: 115px;
+    padding: 16px;
+    height: 115px;
+    margin-right: auto;
+    margin-left: auto;
+    border: 0px solid #000000;
+    background-color: rgba(0,0,0,0);
+    outline: none;
+}
+
+.LoadingModal:focus-within{
+    border: 0px solid #000000;
+    outline: none;
+}
+
+.ReactModal__Content{
+    border: 0px solid #000000;
+    outline: none;
+} 
+
+.ReactModal__Content--after-open{
+    border: 0px solid #000000;
+    outline: none;
+}
+
+.ConfirmModal{
+    position: absolute;
+    top: 180px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    width: 400px;
+    padding: 16px;
+    height: 210px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #FFFFFF;
+}
+
+.ViewAgentModal {
+    position: absolute;
+    top: 250px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    width: 400px;
+    padding: 16px;
+    height: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #FFFFFF;
+}
+
+.DrinkModal{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    width: 700px;
+    padding: 16px;
+    height: 700px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #FFFFFF;
+}
+
+.Modal {
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    width: 500px;
+    padding: 16px;
+    height: 480px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #FFFFFF;
+}
+
+.Overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    z-index: 5000;
+    background-color: rgba(0,0,0,0.4)
+}
+
+.OrderItemsModal {
+    -webkit-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 80px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    width: 800px;
+    height: 630px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #FFFFFF;
+}
+
+.bt-message-div{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #2E86C1;
+    padding: 20px;
+    color: #FFFFFF;
+    z-index: 10000;
+}
+
+.bt-login-left{
+    position: fixed;
+    width:55%;
+    background: url('./images/background_login.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    margin: 0px;
+    padding: 50px;
+}
+
+.bt-login-right{
+    width:100%;
+    background: #FFFFFF;
+    height: 100vh;
+    margin: 0px;
+    top: 0;
+    padding: 50px;
+}
+
+.bt-login-div{
+    width:100%;
+    overflow-x: hidden;
+}
+
+.bt-login-input{
+    border: 1px solid #2E86C1;
+}
+
+.bt-online-indicator{
+    height: 15px;
+    width: 15px;
+    background: #A93226;
+    border-radius: 50%;
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+body{
+    overflow-x: hidden;
+}
+
+.top-top-div{
+    background: url("./images/home_bg_1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bt-nav-li{
+    color: #000000;
+}
+
+.bt-top-h1{
+    font-family: "Oxygen", sans-serif;
+    font-size: 30px;
+}
+
+.privacy-policy-div{
+    margin-top: 80px;
+}
+
+
+.bt-black-text{
+    color: #000000;
+}
+
+.bt-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 700px) {
+    .bt-row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+.bt-city-holder{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 60px;
+}
