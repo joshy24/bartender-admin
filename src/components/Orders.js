@@ -542,6 +542,8 @@ export default class Orders extends Component{
             [name]: value
         })
 
+        console.log("name - "+name)
+
         //load the drinks based on the category selected
         switch(this.state.order_type){
             case "all":
