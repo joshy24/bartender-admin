@@ -53,7 +53,14 @@ export default class AddDrink extends Component{
         this.imageChanged = this.imageChanged.bind(this);
         this.uploadImage = this.uploadImage.bind(this);
         this.createDrink = this.createDrink.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
+
+    handleChange = (selected) => {
+        this.setState({
+            city: selected
+        })
+    };
 
     async createDrink(){
         this.setState({
@@ -273,7 +280,7 @@ export default class AddDrink extends Component{
                     <br/>
                     { this.state.image_uploaded ? <h5 className="bt-green-text">Image Successfully Uploaded</h5> : "" }
 
-                    <AddEditDrink city={this.state.city} content={this.state.content} description={this.state.description} content_string={this.state.content_string} uploadImage={this.uploadImage} categories={this.props.categories} imageChanged={this.imageChanged} onFieldChanged={this.onFieldChanged} file={this.state.file} name={this.state.name} profit={this.state.profit} profit_price={this.state.profit_price} price={this.state.price} category={this.state.category} unit={this.state.unit} image={this.state.image} stock={this.state.stock}/>
+                    <AddEditDrink handleChange={this.handleChange}  city={this.state.city} content={this.state.content} description={this.state.description} content_string={this.state.content_string} uploadImage={this.uploadImage} categories={this.props.categories} imageChanged={this.imageChanged} onFieldChanged={this.onFieldChanged} file={this.state.file} name={this.state.name} profit={this.state.profit} profit_price={this.state.profit_price} price={this.state.price} category={this.state.category} unit={this.state.unit} image={this.state.image} stock={this.state.stock}/>
 
                     <button className="laser-inline green-bg bt-btn bt-inline" style={btn_style_left} onClick={this.createDrink}>save</button>
                     <button className="laser-inline grey-bg bt-btn bt-inline" style={btn_style_right} onClick={this.props.handleCloseModal}>cancel</button>

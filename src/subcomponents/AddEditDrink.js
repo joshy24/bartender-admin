@@ -10,12 +10,8 @@ import Option from "./Option"
 
 const image_text = "Add Image with size <= 500 KB"
 
-const cityOptions = [
-    { value: "LAGOS", label: "Lagos" },
-    { value: "ACCRA", label: "Accra" }
-];
-
 export default function AddEditDrink(props){
+
     return  <div className="bt-item">
                 <div className="row">
                     <div className="col-md-6 col-sm-6">
@@ -88,17 +84,16 @@ export default function AddEditDrink(props){
                     </div>
                     
                     <div className="col-md-6 col-sm-6">
-                        <br/>
                         <label htmlFor="city"><h6>City</h6></label>
                         <ReactSelect
-                            options={cityOptions}
+                            options={Utils.cityOptions}
                             isMulti
                             closeMenuOnSelect={true}
                             hideSelectedOptions={false}
                             components={{
                                 Option
                             }}
-                            onChange={props.onFieldChanged}
+                            onChange={props.handleChange}
                             allowSelectAll={true}
                             value={props.city}
                             />

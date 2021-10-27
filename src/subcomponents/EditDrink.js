@@ -34,7 +34,7 @@ export default class EditDrink extends Component{
             content: [],
             content_string:"",
             stock: 0,
-            city: "LAGOS",
+            city: props.drink.city ? Utils.getCities(props.drink.city) : [],
             file: null
         }
 
@@ -42,6 +42,7 @@ export default class EditDrink extends Component{
         this.imageChanged = this.imageChanged.bind(this);
         this.uploadImage = this.uploadImage.bind(this);
         this.editDrink = this.editDrink.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
 
     componentDidMount(){
@@ -66,11 +67,16 @@ export default class EditDrink extends Component{
             content: this.props.drink.content,
             content_string: contents,
             description: this.props.drink.description,
-            city: this.props.drink.city ? this.props.drink.city : "LAGOS",
             file: null,
             category: this.props.categories[0].name
         })
     }
+
+    handleChange = (selected) => {
+        this.setState({
+            city: selected
+        })
+    };
 
     async editDrink(){
 
@@ -91,6 +97,12 @@ export default class EditDrink extends Component{
             })
             return;
         } 
+
+        var cities = []
+
+        cities = this.state.city.map(selection => {
+            return selection.value;
+        })
 
         var cont = [];
 
@@ -113,7 +125,7 @@ export default class EditDrink extends Component{
             image: this.state.image,
             stock: this.state.stock,
             description: this.state.description,
-            city: this.state.city,
+            city: cities,
             content: cont
         }
         
@@ -140,7 +152,7 @@ export default class EditDrink extends Component{
                 file: null,
                 description: "",
                 content_string: "",
-                city: "",
+                city: this.props.city ? Utils.getCities(this.props.city) : [],
                 content: []
             })
 
@@ -256,7 +268,7 @@ export default class EditDrink extends Component{
                     <h5 className="bt-red-text">{ this.state.error ? this.state.error : "" }</h5>
                     <br/>
 
-                    <AddEditDrink content={this.state.content} description={this.state.description} content_string={this.state.content_string} uploadImage={this.uploadImage} categories={this.props.categories} imageChanged={this.imageChanged} onFieldChanged={this.onFieldChanged} file={this.state.file} name={this.state.name} profit={this.state.profit} price={this.state.price} profit_price={this.state.profit_price} category={this.state.category} unit={this.state.unit} image={this.state.image} stock={this.state.stock} city={this.state.city}/>
+                    <AddEditDrink handleChange={this.handleChange} content={this.state.content} description={this.state.description} content_string={this.state.content_string} uploadImage={this.uploadImage} categories={this.props.categories} imageChanged={this.imageChanged} onFieldChanged={this.onFieldChanged} file={this.state.file} name={this.state.name} profit={this.state.profit} price={this.state.price} profit_price={this.state.profit_price} category={this.state.category} unit={this.state.unit} image={this.state.image} stock={this.state.stock} city={this.state.city}/>
 
                     <button className="laser-inline green-bg bt-btn" style={btn_style_left} onClick={this.editDrink}>save</button>
                     <button className="laser-inline grey-bg bt-btn" style={btn_style_right} onClick={this.props.handleCloseModal}>cancel</button>

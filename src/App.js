@@ -22,10 +22,10 @@ import withAuth from './auth/withAuth';
 
 import * as API from './api/Api';
 
-//import PubNubReact from 'pubnub-react';
+import PubNubReact from 'pubnub-react';
 
-import PubNub from 'pubnub';
-import { PubNubProvider, usePubNub } from 'pubnub-react';
+//import PubNub from 'pubnub';
+//import { PubNubProvider, usePubNub } from 'pubnub-react';
 
 import './App.css';
 import { clearInterval } from 'timers';
@@ -43,7 +43,7 @@ const redbg  = {
     backgroundColor: "#A93226"
 }
 
-const pubnub = new PubNub({
+/*const pubnub = new PubNub({
     publishKey: 'pub-c-da5b31c8-45d5-4018-82be-843221a3b91c',
     subscribeKey: 'sub-c-de1f05de-af97-11e9-a732-8a2b99383297',
     uuid: 'Bartender247ng'
@@ -55,9 +55,9 @@ function App() {
         <Dashboard />
       </PubNubProvider>
     );
-}
+}*/
 
-class Dashboard extends Component {
+class App extends Component {
     constructor(props){
         super(props);
 
@@ -73,10 +73,10 @@ class Dashboard extends Component {
             online: false
         }
 
-        /*this.pubnub = new PubNubReact({
+        this.pubnub = new PubNubReact({
             publishKey: 'pub-c-da5b31c8-45d5-4018-82be-843221a3b91c',
             subscribeKey: 'sub-c-de1f05de-af97-11e9-a732-8a2b99383297'
-        });*/
+        });
 
         this.pubnub.init(this);
 

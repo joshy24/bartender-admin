@@ -35,7 +35,7 @@ export default class Financials extends Component{
     }
 
     async componentDidMount(){
-        
+        this.loadFinancials()
     }
 
     onFieldChanged(event){
@@ -48,13 +48,13 @@ export default class Financials extends Component{
         })
 
         //load the drinks based on the category selected
-        this.loadFinancials()
+        this.loadFinancials(value)
     }
 
-    loadFinancials = async() => {
+    loadFinancials = async(ct) => {
         this.showLoading();
         //orders
-        const res = await API.getFinancials(this.state.city);
+        const res = await API.getFinancials(ct ? ct : this.state.city);
         this.hideLoading();
         if(res=="error"){
             //show error message
@@ -69,7 +69,7 @@ export default class Financials extends Component{
 
 
         this.showLoading();
-        const response = await API.getMonthlyFinancials(this.state.city);
+        const response = await API.getMonthlyFinancials(ct ? ct : this.state.city);
         this.hideLoading();
         if(response=="error"){
             //show error message

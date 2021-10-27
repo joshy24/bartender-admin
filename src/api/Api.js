@@ -270,8 +270,8 @@ export const createCategory = (name, city) => {
             })
 }
 
-export const editCategory = (id,name, city) => {
-    return Axios(editCategoryUrl, {id,name, city})
+export const editCategory = (id,name, image_url, city) => {
+    return Axios(editCategoryUrl, {id,name, image_url, city})
             .then(res => {
                 return res;
             })

@@ -110,10 +110,12 @@ export const getCities = (cities) => {
      if(!cities || cities.length <= 0)
         return null
 
-     var array = cities.map(city => {
-        return cityOptions.forEach(cityOption => {
+     var array = []
+
+     cities.map(city => {
+        cityOptions.forEach(cityOption => {
           if(city == cityOption.value){
-              return cityOption;
+              array.push(cityOption);
           }
         })
      })

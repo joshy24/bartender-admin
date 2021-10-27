@@ -12,7 +12,7 @@ import OrderStatus from "../subcomponents/OrderStatus";
 import { BottomScrollListener } from 'react-bottom-scroll-listener'
 
 import PubNub from 'pubnub';
-import { PubNubProvider, usePubNub } from 'pubnub-react';
+import PubNubReact from 'pubnub-react';
 
 import * as API from '../api/Api';
 
@@ -45,7 +45,7 @@ const btn_blue = {
     width: "120px"
 }
 
-const pubnub = new PubNub({
+/*const pubnub = new PubNub({
     publishKey: 'pub-c-da5b31c8-45d5-4018-82be-843221a3b91c',
     subscribeKey: 'sub-c-de1f05de-af97-11e9-a732-8a2b99383297',
     uuid: 'Bartender247ng'
@@ -57,9 +57,9 @@ export default function Orders() {
         <OrdersContent />
       </PubNubProvider>
     );
-}
+}*/
 
-class OrdersContent extends Component{
+export default class Orders extends Component{
     constructor(props){
         super(props);
 
@@ -84,10 +84,10 @@ class OrdersContent extends Component{
             city: "LAGOS"
         }
 
-        /*this.pubnub = new PubNubReact({
+        this.pubnub = new PubNubReact({
             publishKey: 'pub-c-da5b31c8-45d5-4018-82be-843221a3b91c',
             subscribeKey: 'sub-c-de1f05de-af97-11e9-a732-8a2b99383297'
-        });*/
+        });
 
         this.pubnub.init(this);
 

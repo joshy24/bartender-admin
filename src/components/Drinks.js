@@ -124,10 +124,10 @@ export default class Drinks extends Component{
         }
     }
 
-    async reloadDrinks(){
+    async reloadDrinks(ct){
         this.handleCloseModal();
         this.showLoading();
-        const response = await API.getDrinks(this.state.city);
+        const response = await API.getDrinks(ct ? ct : this.state.city);
         this.hideLoading();
         if(response=="error"){
             //show error message
@@ -182,7 +182,7 @@ export default class Drinks extends Component{
         })
 
         //load the drinks based on the category selected
-        this.reloadDrinks()
+        this.reloadDrinks(value)
 
     }
 
