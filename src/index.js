@@ -7,10 +7,8 @@ import Landing from './components/Landing'
 import {
     BrowserRouter as Router,
     Route,
-    Link,
     Switch,
     Redirect,
-    withRouter
   } from 'react-router-dom';
 
 //Our Auth Service

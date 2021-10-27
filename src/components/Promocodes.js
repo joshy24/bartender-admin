@@ -123,7 +123,7 @@ export default class Promocodes extends Component{
         })
 
         if(name == "city"){
-            this.getPromocodes();
+            this.getPromocodes(value);
         }
     }
 
@@ -177,9 +177,9 @@ export default class Promocodes extends Component{
         }
     }
 
-    async getPromocodes(){
+    async getPromocodes(city){
         this.showLoading();
-        const response = await API.getPromocodes(this.state.promocodes.length, this.state.city);
+        const response = await API.getPromocodes(this.state.promocodes.length, city ? city : this.state.city);
         this.hideLoading();
         if(response=="error"){
             //show error message
@@ -322,6 +322,7 @@ export default class Promocodes extends Component{
 
                         <div className="bt-center" style={{width: "200px"}}>
                             <select className="form-control" id="city" name="city" value={this.state.city} onChange={this.onFieldChanged}>
+                                <option value="ALL">All</option>
                                 <option value="LAGOS">Lagos</option>
                                 <option value="ACCRA">Accra</option>
                             </select>
