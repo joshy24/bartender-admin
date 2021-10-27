@@ -114,6 +114,7 @@ export default class Orders extends Component{
         this.noClicked = this.noClicked.bind(this);
         this.showAgent = this.showAgent.bind(this);
         this.hideAgent = this.hideAgent.bind(this);
+        this.onFieldChanged = this.onFieldChanged.bind(this);
     }
 
     async yesClicked(){
