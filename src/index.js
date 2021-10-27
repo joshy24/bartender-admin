@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './NewApp';
+import App from './App';
 import Login from './components/Login'
 import Landing from './components/Landing'
 
