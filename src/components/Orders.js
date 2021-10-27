@@ -332,10 +332,10 @@ export default class Orders extends Component{
         })
     }
 
-    async getOrders(){
+    async getOrders(city){
         this.showLoading();
 
-        const response = await API.getOrders((this.state.order_type === "all") ? this.state.orders.length : 0, this.state.city);
+        const response = await API.getOrders((this.state.order_type === "all") ? this.state.orders.length : 0, city ? city : this.state.city);
 
         this.hideLoading();
 
@@ -383,10 +383,10 @@ export default class Orders extends Component{
         this.getCount();
     }
 
-    async getCompleted(){
+    async getCompleted(city){
         this.showLoading();
 
-        const response = await API.getCompletedOrders( (this.state.order_type === "completed") ? this.state.orders.length : 0, this.state.city );
+        const response = await API.getCompletedOrders( (this.state.order_type === "completed") ? this.state.orders.length : 0, city ? city : this.state.city );
 
         this.hideLoading();
 
@@ -434,10 +434,10 @@ export default class Orders extends Component{
         this.getCount();
     }
 
-    async getPending(){
+    async getPending(city){
         this.showLoading();
         
-        const response = await API.getPendingOrders( (this.state.order_type === "pending") ? this.state.orders.length : 0, this.state.city );
+        const response = await API.getPendingOrders( (this.state.order_type === "pending") ? this.state.orders.length : 0, city ? city : this.state.city );
 
         this.hideLoading();
 
@@ -543,18 +543,18 @@ export default class Orders extends Component{
             [name]: value
         })
 
-        console.log("name - "+name)
+        console.log("name - "+value)
 
         //load the drinks based on the category selected
         switch(this.state.order_type){
             case "all":
-                this.getOrders();
+                this.getOrders(value);
             break;
             case "completed":
-                this.getCompleted();
+                this.getCompleted(value);
             break;
             case "pending":
-                this.getPending()
+                this.getPending(value)
             break;
         }
     }
