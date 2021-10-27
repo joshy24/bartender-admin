@@ -18,6 +18,7 @@ import AuthHelperMethods from './auth/AuthHelperMethods';
 
 import * as serviceWorker from './serviceWorker';
 
+
 const Auth = new AuthHelperMethods();
 
 const ProtectedRoute = ({ component: Component, ...rest }) => (
