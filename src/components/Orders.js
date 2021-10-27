@@ -555,6 +555,7 @@ export default class Orders extends Component{
 
                         <div className="bt-center" style={{width: "200px"}}>
                             <select className="form-control" id="city" name="city" value={this.state.city} onChange={this.onFieldChanged}>
+                                <option value="ALL">All</option>
                                 <option value="LAGOS">Lagos</option>
                                 <option value="ACCRA">Accra</option>
                             </select>
