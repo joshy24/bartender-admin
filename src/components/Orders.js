@@ -543,7 +543,17 @@ export default class Orders extends Component{
         })
 
         //load the drinks based on the category selected
-        this.reloadDrinks()
+        switch(this.state.order_type){
+            case "all":
+                this.getOrders();
+            break;
+            case "completed":
+                this.getCompleted();
+            break;
+            case "pending":
+                this.getPending()
+            break;
+        }
     }
 
     render(){
